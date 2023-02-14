@@ -1,0 +1,6 @@
+#cloud-config
+
+runcmd:
+  - curl -sfL https://get.k3s.io | sh -
+  - sleep 10
+  - kubectl apply -f https://raw.githubusercontent.com/stevemar/metal-code-snippets/main/yaml/wordpress.yaml
